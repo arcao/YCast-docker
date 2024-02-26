@@ -50,6 +50,8 @@ RUN apk --no-cache update && \
 #   curl -L https://github.com/milaq/YCast.git \
 #    curl -L https://codeload.github.com/MaartenSanders/YCast/tar.gz/$YC_VERSION \
     | tar xvzC /opt/ycast && \
+    cd /opt/ycast/YCast-${YC_VERSION} && \
+    /usr/bin/python3 setup.py install && \
     apk del --no-cache curl && \
 #    pip3 uninstall --no-cache-dir -y setuptools --break-system-packages && \
 #    pip3 uninstall --no-cache-dir -y pip && \
