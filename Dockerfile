@@ -51,7 +51,7 @@ RUN apk --no-cache update && \
 #    curl -L https://codeload.github.com/MaartenSanders/YCast/tar.gz/$YC_VERSION \
     | tar xvzC /opt/ycast && \
     apk del --no-cache curl && \
-    pip3 uninstall --no-cache-dir -y setuptools --break-system-packages && \
+#    pip3 uninstall --no-cache-dir -y setuptools --break-system-packages && \
 #    pip3 uninstall --no-cache-dir -y pip && \
     find /usr/lib -name \*.pyc -exec rm -f {} \; && \
 #    find /usr/share/terminfo -type f -not -name xterm -exec rm -f {} \; && \
